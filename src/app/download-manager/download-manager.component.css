@@ -1,0 +1,17 @@
+.pdfDownload{
+    display: block;
+    position: absolute;
+    left: 0px;
+}
+
+.wordDownload{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.textfileDownload{
+    display: block;
+    position: absolute;
+    right: 0px;
+}

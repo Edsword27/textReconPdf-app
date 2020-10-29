@@ -1,0 +1,27 @@
+.documentPdf{
+    
+}
+.text-area{
+    resize: horizontal;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.page-buttons{
+    margin: auto;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.prevButton{
+    margin-right: 5px;
+}
+
+.nextButton{
+    margin-left: 5px;
+}

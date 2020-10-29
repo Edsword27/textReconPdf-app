@@ -1,0 +1,35 @@
+<pdf-viewer
+    class="documentPdf" 
+    [src]="pdfPath" 
+    [render-text]="false"
+    [show-all]="false"
+    [page]="page"
+    [show-borders]="true"
+    style="display: block;">
+</pdf-viewer>
+<canvas #myCanvas 
+    class="selectionWindow"
+    [width]="canvasWidth" 
+    [height]="canvasHeight" 
+    style="background:rgba(165, 158, 158, 0.233);" 
+    (mousedown)="mdEvent($event)" 
+    (mouseup)="muEvent($event)" 
+    (mousemove)="mmEvent($event)">
+</canvas>
+<button 
+    mat-raised-button class="fullPageButton"
+    (click)="selectFullPage()" 
+    [disabled]="disabler">
+Pagina Completa</button>
+<div class = "page-buttons">
+    <button 
+        mat-raised-button class="prevButton"
+        (click)="prevPage()" 
+        [disabled]="disabler">
+    Pag. Previa</button>
+    <button 
+        mat-raised-button class="nextButton" 
+        (click)="nextPage()" 
+        [disabled]="disabler">
+    Pag. Siguiente</button>
+</div>

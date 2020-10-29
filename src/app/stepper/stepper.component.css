@@ -1,0 +1,42 @@
+.mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+    background-color: #e04040;
+}
+
+.firstNext {
+    margin: auto;
+    margin-top: 10px;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.finalPrev {
+    margin: auto;
+    margin-top: 10px;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-buttons{
+    margin: auto;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.prev{
+    margin-right: 5px;
+}
+
+.next {
+    margin-left: 5px;
+}
+
+.finalPrev {
+    margin-left: 440px;
+}

@@ -1,0 +1,42 @@
+<a 
+    id="downloadPdf" 
+    [href]="urlPdf" 
+    [download]="filenamePdf"
+    multiple style="display: none">
+    Download pdf
+</a>
+<a 
+    id="downloadWord" 
+    [href]="urlWord" 
+    [download]="filenameWord"
+    multiple style="display: none">
+    Download word
+</a>
+<a 
+    id="downloadTextfile" 
+    [href]="urlTextfile" 
+    [download]="filenameTextfile"
+    multiple style="display: none">
+    Download textfile
+</a>
+<input 
+    class="pdfDownload" 
+    type="image" 
+    src="assets/A.jpg" 
+    style="width:300px" 
+    onclick="document.getElementById('downloadPdf').click();"
+>
+<input 
+    class="textfileDownload" 
+    type="image" 
+    src="assets/T.jpg" 
+    style="width:300px" 
+    onclick="document.getElementById('downloadTextfile').click();">
+<input 
+    class="wordDownload" 
+    type="image" 
+    src="assets/W.jpg" 
+    style="width:300px" 
+    onclick="document.getElementById('downloadWord').click();"
+>
+

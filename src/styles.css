@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-toolbar{
+    background: #e04040;
+    color: rgb(255, 255, 255);
+}
+.mat-form-field{
+    width: 220px;
+    color: rgb(0, 0, 0);
+    background: #ffffff;
+}
+
+.mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+	background-color: #e04040;
+	color: white;
+}
+
+.mat-raised-button {
+    background-color: #e04040;
+    color: white;
+}

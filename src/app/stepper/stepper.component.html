@@ -1,0 +1,63 @@
+<mat-horizontal-stepper>
+    <mat-step 
+      label="Ingresar Pdf" 
+      completed=false 
+      editable=false>
+      <app-pdf-manage 
+        [disabler]="disableState" 
+        [pdfPath]="documentPath">
+      </app-pdf-manage>
+      <button 
+        mat-raised-button 
+        matStepperNext 
+        class="firstNext"
+        (click)="processData()">
+        Siguiente
+      </button>
+    </mat-step>
+    <mat-step 
+      label="Seleccionar Contenido" 
+      completed=false>
+      <app-content-selection 
+        [pdfPath]="documentPath"
+        [page_list]="pageList"
+        [page]="firstPage"
+        [canvasHeight]="pageHeight"
+        [canvasWidth]="pageWidth"
+        [disabler]="disableState">
+      </app-content-selection>
+      <button 
+        mat-raised-button 
+        matStepperNext 
+        class="firstNext">
+        Siguiente
+      </button>
+    </mat-step>
+    <mat-step 
+      label="Modificar Texto" 
+      completed=false>
+      <app-text-modify
+        [pdfPath]="documentPath"
+        [page_list]="pageList"
+        [page]="firstPage"
+        [canvasHeight]="pageHeight"
+        [canvasWidth]="pageWidth">
+      </app-text-modify>
+      <div class = "control-buttons">
+        <button mat-raised-button matStepperPrevious class="prev">Anterior</button>
+        <button mat-raised-button matStepperNext class="next">Siguiente</button>
+      </div>
+    </mat-step>
+    <mat-step 
+      label="Finalizado" 
+      completed=false>
+        <app-download-manager>
+        </app-download-manager>
+        <button 
+          mat-raised-button 
+          matStepperPrevious 
+          class="finalPrev">
+          Anterior
+        </button>
+    </mat-step>
+</mat-horizontal-stepper>

@@ -1,0 +1,44 @@
+<mat-radio-group name="page-options" [(ngModel)]="selection" [disabled]="disabler">
+    <mat-radio-button class ="all-rButton" name="page-options" value="Todas las paginas" (click)="selectAllPages()">Todas las paginas</mat-radio-button>
+    <mat-radio-button class = "range-rButton" name="page-options" value="Rango de paginas" (click)="selectPagesRange()">Rango de paginas</mat-radio-button>
+    <mat-radio-button class = "list-rButton" name="page-options" value="Lista de paginas" (click)="selectPageList()">Lista de paginas</mat-radio-button>
+</mat-radio-group>
+<mat-form-field class="formRangIni" *ngIf="actRange" appearence="standard">
+    <input 
+        matNativeControl
+        id="firstRange" 
+        type="number" 
+        placeholder = "Inicial"
+        [(ngModel)] = "rangeBegin">
+</mat-form-field>
+<mat-form-field class="formRangFin" *ngIf="actRange" appearence="standard">
+    <input
+        matNativeControl
+        id="lastRange"
+        type="number" 
+        placeholder = "Final"
+        [(ngModel)] = "rangeEnd">
+</mat-form-field>
+<mat-form-field class="formListPag" *ngIf="actList" appearence="standard">
+    <input 
+        matNativeControl
+        (keypress) = "preventCharacters($event)"
+        id="listPage" 
+        type="text" 
+        placeholder = "Ingrese las paginas seleccionadas"
+        [(ngModel)] = "pagesListed">
+</mat-form-field>
+<pdf-viewer 
+    #pagi 
+    [src]="pdfPath" 
+    [render-text]="false"
+    [show-all]="false"
+    [page]="page"
+    [show-borders]="true"
+    style="display: block;"
+    (after-load-complete)="afterLoadComplete($event)">
+</pdf-viewer>
+<div class = "page-buttons">
+    <button mat-raised-button class="pagePrev" (click)="prevPage()" [disabled]="disabler">Pag. Previa</button>
+    <button mat-raised-button class="pageNext" (click)="nextPage()" [disabled]="disabler">Pag. Siguiente</button>
+</div>

@@ -1,0 +1,26 @@
+<mat-toolbar 
+    class="mat-elevation-z4">
+    <span>Extractor de Texto</span>
+    <input 
+        id="showFileName" 
+        type="string" 
+        [placeholder] = "placeHold"
+        disabled = true>
+    <input
+        id="fileInput" 
+        type="file" 
+        accept=".pdf"
+        (change)="onFileSelected()" 
+        [disabled]="searchButtonDisabler" 
+        [(ngModel)]="filePath" 
+        multiple style="display: none">
+    <a 
+        mat-raised-button for="fileInput" 
+        onclick="document.getElementById('fileInput').click();"
+        [disabled]="searchButtonDisabler">
+    Buscar</a>
+</mat-toolbar>
+<app-stepper 
+    [documentPath]="filePath" 
+    [disableState]="disableElements">
+</app-stepper>

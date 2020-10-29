@@ -1,0 +1,30 @@
+.documentPdf{
+    position: absolute;
+}
+
+.selectionWindow{
+    position: relative;
+}
+
+.fullPageButton{
+    position: relative;
+    float: right;
+    margin-top: 50px;
+}
+
+.page-buttons{
+    margin: auto;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.prevButton{
+    margin-right: 5px;
+}
+
+.nextButton{
+    margin-left: 5px;
+}
